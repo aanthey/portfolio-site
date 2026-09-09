@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+#profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.project-cards {
+    border: solid 2px black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#linkedin, #github {
+    width: 50px;
+    height: 50px;
+}
