@@ -1,34 +1,61 @@
-* {
+
+.page {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
+    background-color: #DCE6F2;
+    color: #293247;
 }
 
-.navbar ul {
-    list-style-type: none;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 0;
+.navbar-nav .nav-link {
+    color: inherit;
+    font-weight: bold;
 }
+
+header {
+    padding: 10px;
+    text-align: center;
+}
+
 
 #profile-pic {
     width: 250px;
     height: 250px;
+    object-fit: cover;
     border-radius: 10%;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-.project-cards {
+main > section {
+    padding: 24px 0;
+    margin-bottom: 24px;
+}
+
+
+.card {
+    background-color: #FFF8EE;
     border: solid 2px black;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    border-radius: 10px;
+    height: auto;
+    width: 50%;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+}
+.badge.rounded-pill {
+    color: white;
+}
+#react-badge {
+    background-color: #0ebded;
+}
+
+#node-badge {
+    background-color: #339933;
+}
+
+#supabase-badge {
+    background-color: #3ECF8E;
 }
 
 #linkedin, #github {
     width: 50px;
     height: 50px;
+    object-fit: contain;
 }

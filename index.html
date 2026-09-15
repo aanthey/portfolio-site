@@ -3,55 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
-    <script src="./scripts.js"></script>
     <title>Arvind's Portfolio</title>
 </head>
-<body>
-    <header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    
+<body>
+    <div class="page">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
     <h1 id="name">Arvind Anthey</h1>
     <p id="title">Aspiring Full-Stack Developer</p>
     <img id="profile-pic" src="./assets/arvind_profilepic.jpg" alt="Profile Picture">
     </header>
-    
-    <main>
+    <main class="container">
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        
-        <p>
+         <p>
             I am an aspiring full-stack developer with a passion for building web applications and creating engaging user experiences.
         </p>
     </section>
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <p>
             Here are some of the projects I have worked on, showcasing my skills in full-stack development.
         </p>
-        <div class="project-cards">
-        <h3>PAWS</h3>
-        <p>
+        <!-- Project Card -->
+        <div class="card">
+            <img src="./assets/PAWS_Logo_NoText.png" class="card-img-top" alt="PAWS Project Logo">
+        <div class="card-body">
+        <h3 class="card-title">PAWS</h3>
+        <p class="card-text">
             PAWS is a community-driven platform inspired by Instagram, but designed specifically for pets and their owners. 
             Users can share photos, videos, and stories of their pets, connect with other pet enthusiasts, and even organize meetups for pet playdates and events.
-            <br>
-            <br>
-            <strong>Github Repo:</strong><a rel="noopener noreferrer" href="https://github.com/PAWS-CTP/PAWS" target="_blank">https://github.com/PAWS-CTP/PAWS</a>
         </p>
+        <div class="d-flex flex-column align-items-start gap-2">
+        <a class="btn btn-primary" href="https://github.com/PAWS-CTP/PAWS" role="button" target="_blank" rel="noopener noreferrer">Github Repo</a>
+        <div class="d-flex flex-wrap gap-1">
+        <span class="badge rounded-pill" id="react-badge">React.js</span>
+        <span class="badge rounded-pill" id="node-badge">Node.js</span>
+        <span class="badge rounded-pill" id="supabase-badge">Supabase</span>
+        </div>
+        </div>
+        </div>
         </div>
     </section>
-
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
-        <img id="linkedin" src="./assets/LI-In-Bug.png" alt="LinkedIn Logo">
-        <img id="github" src="./assets/GitHub_Invertocat_Black.svg" alt="GitHub Logo">
+        <div class="d-flex gap-3">
+        <a href="https://www.linkedin.com/in/arvind-anthey/" target="_blank" rel="noopener noreferrer"><img id="linkedin" src="./assets/LI-In-Bug.png" alt="LinkedIn Logo"></a>
+        <a href="https://github.com/aanthey" target="_blank" rel="noopener noreferrer"><img id="github" src="./assets/GitHub_Invertocat_Black.svg" alt="GitHub Logo"></a>
+        </div>
     </section>
 
     </main>
@@ -59,5 +77,8 @@
     <footer>
         <p>&copy; 2026 Arvind Anthey. All rights reserved.</p>
     </footer>
+    </div> <!-- Closing the page div -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./scripts.js"></script>
 </body>
 </html>

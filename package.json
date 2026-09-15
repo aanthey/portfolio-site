@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "This is my portfolio site to showcase my work (projects, work experience etc) as well as my technical skills.",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aanthey/portfolio-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aanthey/portfolio-site/issues"
+  },
+  "homepage": "https://github.com/aanthey/portfolio-site#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
