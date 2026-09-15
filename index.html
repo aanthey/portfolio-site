@@ -18,6 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -37,6 +38,23 @@
             I am an aspiring full-stack developer with a passion for building web applications and creating engaging user experiences.
         </p>
     </section>
+    <!-- Work Experience Section -->
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <article class="experience-card">
+            <h3>CUNY Tech Prep</h3>
+            <p class="experience-role">Fellow, Software Development</p>
+            <p class="experience-details">
+                New York, NY &middot;
+                <time datetime="2025-07">Jul 2025</time> &ndash;
+                <time datetime="2026-05">May 2026</time>
+            </p>
+            <ul>
+                <li>Selected for a competitive web development fellowship with students from across the 11 CUNY senior colleges, where fellows create technical projects using tools such as React, Node.js, Express, and PostgreSQL.</li>
+                <li>Participated in weekly courses covering design, implementation, and deployment practices, including MVC, Git/GitHub version control, agile and Scrum with Trello and Slack, test-driven development, and CI/CD.</li>
+            </ul>
+        </article>
+    </section>
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
@@ -54,11 +72,11 @@
             Users can share photos, videos, and stories of their pets, connect with other pet enthusiasts, and even organize meetups for pet playdates and events.
         </p>
         <div class="d-flex flex-column align-items-start gap-2">
-        <a class="btn btn-primary" id="github-button" href="https://github.com/PAWS-CTP/PAWS" role="button" target="_blank" rel="noopener noreferrer">Github Repo</a>
+        <a class="btn btn-primary github-button" href="https://github.com/PAWS-CTP/PAWS" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
         <div class="d-flex flex-wrap gap-1">
         <span class="badge rounded-pill" id="react-badge">React.js</span>
         <span class="badge rounded-pill" id="node-badge">Node.js</span>
-        <span class="badge rounded-pill" id="supabase-badge">Supabase</span>
+        <span class="badge rounded-pill supabase-badge">Supabase</span>
         <span class="badge rounded-pill" id="typescript-badge">TypeScript</span>
         </div>
         </div>
@@ -75,9 +93,12 @@
                 <p class="card-text">
                     I worked on user authentication and the user interface.
                 </p>
-                <div class="d-flex flex-wrap gap-1">
-                    <span class="badge rounded-pill project-tech">Kotlin</span>
-                    <span class="badge rounded-pill project-tech">Supabase</span>
+                <div class="d-flex flex-column align-items-start gap-2">
+                    <a class="btn btn-primary github-button" href="https://github.com/aanthey/SquadCheck" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                    <div class="d-flex flex-wrap gap-1">
+                        <span class="badge rounded-pill project-tech">Kotlin</span>
+                        <span class="badge rounded-pill supabase-badge">Supabase</span>
+                    </div>
                 </div>
             </div>
         </article>

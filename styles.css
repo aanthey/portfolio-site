@@ -69,6 +69,7 @@ main > section {
 }
 
 #about h2,
+#experience > h2,
 #projects > h2,
 #contact > h2 {
     margin-bottom: 16px;
@@ -82,6 +83,7 @@ main > section {
     line-height: 1.7;
 }
 
+#experience > h2::after,
 #projects > h2::after,
 #contact > h2::after {
     content: "";
@@ -99,6 +101,41 @@ main > section {
     line-height: 1.7;
 }
 
+.experience-card {
+    padding: clamp(24px, 4vw, 48px);
+    background-color: #FFF8EE;
+    border: 1px solid #C8BECE;
+    border-radius: 24px;
+    box-shadow: 0 6px 18px rgba(41, 50, 71, 0.08);
+}
+
+.experience-card h3 {
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.experience-role {
+    margin-bottom: 8px;
+    color: #655080;
+    font-weight: 600;
+}
+
+.experience-details {
+    margin-bottom: 24px;
+    font-size: 0.875rem;
+}
+
+.experience-card ul {
+    max-width: 75ch;
+    margin-bottom: 0;
+    padding-left: 24px;
+    line-height: 1.7;
+}
+
+.experience-card li + li {
+    margin-top: 16px;
+}
+
 
 .card {
     background-color: #FFF8EE;
@@ -108,7 +145,7 @@ main > section {
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
-#github-button {
+.github-button {
     background-color: #045bb2;
     color: white;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -125,7 +162,7 @@ main > section {
     background-color: #339933;
 }
 
-#supabase-badge {
+.supabase-badge {
     background-color: #3ECF8E;
 }
 
