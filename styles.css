@@ -28,6 +28,7 @@ header {
     display: table;
     margin: 0 auto 24px;
     padding: 8px 16px;
+    border: 1px solid #C8BECE;
     border-radius: 16px;
     background-color: #E9E0F0;
     color: #655080;
@@ -51,7 +52,7 @@ header {
     aspect-ratio: 1;
     margin: 0 auto;
     object-fit: cover;
-    border: 8px solid #FFF8EE;
+    border: 8px solid #655080;
     border-radius: 32px;
     box-shadow: 0 12px 28px rgba(41, 50, 71, 0.16);
 }
@@ -146,10 +147,10 @@ main > section {
 
 .card {
     background-color: #FFF8EE;
-    border: solid 2px black;
+    border: 1px solid #C8BECE;
     border-radius: 10px;
     height: auto;
-    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 18px rgba(41, 50, 71, 0.08);
 }
 
 .project-grid .card-img-top {
