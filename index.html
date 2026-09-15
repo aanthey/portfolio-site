@@ -27,7 +27,7 @@
     <header>
     <h1 id="name">Arvind Anthey</h1>
     <p id="title">Aspiring Full-Stack Developer</p>
-    <img id="profile-pic" src="./assets/arvind_profilepic.jpg" alt="Profile Picture">
+    <img id="profile-pic" src="./assets/arvind_profilepic.jpg" alt="Portrait of Arvind Anthey">
     </header>
     <main class="container">
     <!-- About Section -->
@@ -43,6 +43,7 @@
         <p>
             Here are some of the projects I have worked on, showcasing my skills in full-stack development.
         </p>
+        <div class="project-grid">
         <!-- Project Card -->
         <div class="card">
             <img src="./assets/PAWS_Logo_NoText.png" class="card-img-top" alt="PAWS Project Logo">
@@ -53,15 +54,34 @@
             Users can share photos, videos, and stories of their pets, connect with other pet enthusiasts, and even organize meetups for pet playdates and events.
         </p>
         <div class="d-flex flex-column align-items-start gap-2">
-        <a class="btn btn-primary" href="https://github.com/PAWS-CTP/PAWS" role="button" target="_blank" rel="noopener noreferrer">Github Repo</a>
+        <a class="btn btn-primary" id="github-button" href="https://github.com/PAWS-CTP/PAWS" role="button" target="_blank" rel="noopener noreferrer">Github Repo</a>
         <div class="d-flex flex-wrap gap-1">
         <span class="badge rounded-pill" id="react-badge">React.js</span>
         <span class="badge rounded-pill" id="node-badge">Node.js</span>
         <span class="badge rounded-pill" id="supabase-badge">Supabase</span>
+        <span class="badge rounded-pill" id="typescript-badge">TypeScript</span>
         </div>
         </div>
         </div>
         </div>
+        <!-- SquadCheck Project Card -->
+        <article class="card">
+            <div class="card-body">
+                <h3 class="card-title">SquadCheck</h3>
+                <p class="card-text">
+                    SquadCheck is a team-built habit tracker that gamifies progress through quests.
+                    Users earn coins to unlock badges, and the app includes working user authentication.
+                </p>
+                <p class="card-text">
+                    I worked on user authentication and the user interface.
+                </p>
+                <div class="d-flex flex-wrap gap-1">
+                    <span class="badge rounded-pill project-tech">Kotlin</span>
+                    <span class="badge rounded-pill project-tech">Supabase</span>
+                </div>
+            </div>
+        </article>
+        </div> <!-- Closing the project grid -->
     </section>
     <!-- Contact Section -->
     <section id="contact">
