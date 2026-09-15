@@ -39,6 +39,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 24px;
+    align-items: start;
 }
 
 
@@ -77,9 +78,15 @@ main > section {
     font-weight: 700;
 }
 
+#about > h2 {
+    text-align: center;
+}
+
 #about p {
     max-width: 65ch;
+    margin-inline: auto;
     margin-bottom: 0;
+    text-align: center;
     line-height: 1.7;
 }
 
@@ -145,10 +152,38 @@ main > section {
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
+.project-grid .card-img-top {
+    width: 100%;
+    height: 200px;
+    padding: 16px;
+    object-fit: contain;
+}
+
 .github-button {
     background-color: #045bb2;
     color: white;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.contribution-toggle {
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    border: 1px solid #655080;
+    border-radius: 8px;
+    background-color: #E9E0F0;
+    color: #293247;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contribution-toggle:hover {
+    background-color: #DDD0E7;
+}
+
+.contribution-toggle:focus-visible {
+    outline: 3px solid #655080;
+    outline-offset: 3px;
 }
 .badge.rounded-pill {
     color: white;

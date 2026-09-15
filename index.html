@@ -35,7 +35,9 @@
     <section id="about">
         <h2>About Me</h2>
          <p>
-            I am an aspiring full-stack developer with a passion for building web applications and creating engaging user experiences.
+            I’m a senior Computer Science student at the College of Staten Island and an aspiring full-stack developer.
+            Through the CUNY Tech Prep fellowship and team projects, I’ve gained experience building applications and collaborating with other developers.
+            On SquadCheck, I worked on user authentication and the user interface using Kotlin and Supabase.
         </p>
     </section>
     <!-- Work Experience Section -->
@@ -58,9 +60,6 @@
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <p>
-            Here are some of the projects I have worked on, showcasing my skills in full-stack development.
-        </p>
         <div class="project-grid">
         <!-- Project Card -->
         <div class="card">
@@ -70,6 +69,12 @@
         <p class="card-text">
             PAWS is a community-driven platform inspired by Instagram, but designed specifically for pets and their owners. 
             Users can share photos, videos, and stories of their pets, connect with other pet enthusiasts, and even organize meetups for pet playdates and events.
+        </p>
+        <button class="contribution-toggle" id="paws-toggle" type="button" aria-expanded="false" aria-controls="paws-contributions">
+            My contributions
+        </button>
+        <p class="card-text" id="paws-contributions" hidden>
+            I worked on the front-end UI and implemented the user authentication.
         </p>
         <div class="d-flex flex-column align-items-start gap-2">
         <a class="btn btn-primary github-button" href="https://github.com/PAWS-CTP/PAWS" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
@@ -90,7 +95,10 @@
                     SquadCheck is a team-built habit tracker that gamifies progress through quests.
                     Users earn coins to unlock badges, and the app includes working user authentication.
                 </p>
-                <p class="card-text">
+                <button class="contribution-toggle" id="squadcheck-toggle" type="button" aria-expanded="false" aria-controls="squadcheck-contributions">
+                    My contributions
+                </button>
+                <p class="card-text" id="squadcheck-contributions" hidden>
                     I worked on user authentication and the user interface.
                 </p>
                 <div class="d-flex flex-column align-items-start gap-2">
