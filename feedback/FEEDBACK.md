@@ -5,23 +5,23 @@
 
 > **How this review was made.** Your instructor reviewed this project with [Claude](https://claude.com) (Anthropic's AI) as a second set of eyes. Claude cloned the repo, read every line, loaded the live site at phone, tablet and desktop widths, ran the W3C validator, opened the hamburger menu, and clicked both toggles. Every note and every point below was read and approved by your instructor. Same standard, same rubric, just more time spent looking at *your* code than one human has in a grading week.
 
-## Grade: 81 / 100
+## Grade: 86 / 100
 
 | Category | Points | Earned | One line |
 |---|:-:|:-:|---|
 | Semantic HTML | 20 | 16 | Right elements, clean headings; two validator errors and one card is a `div` |
-| CSS layout | 25 | 20 | Your Grid is great; every Flexbox on the page belongs to Bootstrap |
+| CSS layout | 25 | 25 | Bootstrap is allowed; your Grid rule is the best in the class so far |
 | Responsive design | 15 | 13 | No horizontal scroll anywhere; zero media queries of your own |
 | JavaScript interaction | 15 | 13 | Accessible toggles done right, written twice |
 | Repository and deployment | 15 | 11 | Real commit history over 12 days; README is missing half its required items |
 | Content and polish | 10 | 8 | Real projects, real photo, alt text everywhere; 3.7 MB of images for a one-page site |
-| **Total** | **100** | **81** | **Good process, thoughtful details, but Bootstrap did the part the brief was testing.** |
+| **Total** | **100** | **86** | **Good process, thoughtful details, strong CSS. Finish the README and own the media queries.** |
 
 ## The short version
 
 This is a real portfolio. Real projects with real repos, a real photo with real alt text, a `<time>` element with a `datetime` attribute, `aria-expanded` kept in sync by hand, a `:focus-visible` style you wrote yourself. Those are details most students don't know exist yet. And your commit history is what the brief asked for: eleven commits across twelve days, each one a feature.
 
-Here's the problem. Project 1 is a review of *your* HTML, CSS and JavaScript. Open `styles.css` and search for `display: flex`. Zero. Search for `@media`. Zero. The navbar, its mobile collapse, the flex layouts inside the cards, the page container: all Bootstrap. Your own CSS is genuinely good where it exists, but the brief said "Flexbox and Grid, both" and "mobile-first media queries," and you wrote one of those four things. That's where the points went.
+So where did the points go? Not the CSS. Bootstrap is allowed for this project, and the CSS you wrote on top of it is deliberate and clean. The deductions are smaller things that add up: a README that stops at the description, two validator errors, zero media queries of your own, a JavaScript file written twice, and 3.7 MB of images for three pictures. Every one of those is under an hour of work.
 
 ## What the numbers looked like
 
@@ -58,7 +58,7 @@ Things Claude measured on the live site (so you know these aren't guesses):
 - **One card is a `div`, one is an `article`.** PAWS is `<div class="card">` ([L68](https://github.com/aanthey/portfolio-site/blob/f4bd512/index.html#L68)), SquadCheck is `<article class="card">` ([L94](https://github.com/aanthey/portfolio-site/blob/f4bd512/index.html#L94)). They're the same kind of thing. Both should be `article`.
 - **`div.page` wrapping everything** ([L14](https://github.com/aanthey/portfolio-site/blob/f4bd512/index.html#L14)) so you can put `font-family`, `background-color` and `margin: 0` on it ([styles.css L2–7](https://github.com/aanthey/portfolio-site/blob/f4bd512/styles.css#L2-L7)). That's what `body` is for. Move those rules to `body` and delete the wrapper.
 
-## CSS layout — 20 / 25
+## CSS layout — 25 / 25
 
 **What's working**
 
@@ -68,7 +68,7 @@ Things Claude measured on the live site (so you know these aren't guesses):
 
 **What to change**
 
-- **You didn't write any Flexbox.** Every flex layout on the page is a Bootstrap utility class: `d-flex flex-column align-items-start gap-2` ([index.html L82](https://github.com/aanthey/portfolio-site/blob/f4bd512/index.html#L82), [L107](https://github.com/aanthey/portfolio-site/blob/f4bd512/index.html#L107)), `d-flex gap-3` ([L121](https://github.com/aanthey/portfolio-site/blob/f4bd512/index.html#L121)), and the entire navbar. The brief says Flexbox "must do real layout work somewhere on the site." Bootstrap's does. Yours doesn't exist. This is the biggest single deduction on the sheet, and it's fixable in an afternoon: write the navbar yourself (`display: flex; justify-content: center; gap: ...`), and replace the `d-flex` utilities with your own class.
+- **Bootstrap is doing your Flexbox, and that's allowed.** Every flex layout on the page is a Bootstrap utility class: `d-flex flex-column align-items-start gap-2` ([index.html L82](https://github.com/aanthey/portfolio-site/blob/f4bd512/index.html#L82), [L107](https://github.com/aanthey/portfolio-site/blob/f4bd512/index.html#L107)), `d-flex gap-3` ([L121](https://github.com/aanthey/portfolio-site/blob/f4bd512/index.html#L121)), and the entire navbar. No points lost for that. But you clearly *can* write layout CSS, because your Grid rule proves it. As a learning step, not a grading one, try writing the navbar yourself (`display: flex; justify-content: center; gap: ...`). You'll see exactly what `navbar-expand-lg` has been doing for you, and Project 2 gets easier.
 
   ```mermaid
   flowchart TB
@@ -84,10 +84,10 @@ Things Claude measured on the live site (so you know these aren't guesses):
           b2[".d-flex .flex-column .gap-2<br/>every Flexbox on the page"]
           b3[".container<br/>page width and side padding"]
       end
-      you -.->|"the brief grades this column"| bs
+      you -.->|"Bootstrap is allowed, and your Grid is the best in class.<br/>Next step: write the Flexbox yourself too."| bs
       style y1 fill:#e3f4e1,stroke:#2e7d32,color:#111
-      style y2 fill:#fde2e2,stroke:#c0392b,color:#111
-      style y3 fill:#fde2e2,stroke:#c0392b,color:#111
+      style y2 fill:#fff4d6,stroke:#b7791f,color:#111
+      style y3 fill:#fff4d6,stroke:#b7791f,color:#111
       style b1 fill:#fff4d6,stroke:#b7791f,color:#111
       style b2 fill:#fff4d6,stroke:#b7791f,color:#111
       style b3 fill:#fff4d6,stroke:#b7791f,color:#111
@@ -187,7 +187,7 @@ flowchart TB
     subgraph p1["Fix first: these cost the most points"]
         direction TB
         a1["README: add 'how to run locally'<br/>and the live URL<br/>(two of four required items are missing)"]
-        a2["Write your own Flexbox and<br/>at least one media query<br/>(right now Bootstrap does both)"]
+        a2["Write at least one media query<br/>of your own (the brief asks for<br/>mobile-first breakpoints)"]
         a3["Fix the 2 validator errors:<br/>favicon type attribute, duplicate id"]
     end
     subgraph p2["Next: the brief asked for these"]
@@ -201,6 +201,7 @@ flowchart TB
         c1["One toggle handler<br/>instead of two copies"]
         c2["Present-tense commit messages:<br/>'add favicon', not 'Added favicon'"]
         c3["Drop the unused npm bootstrap<br/>and .vscode from the repo"]
+        c4["Try rebuilding the navbar in<br/>your own Flexbox (learning, not points)"]
     end
     p1 --> p2 --> p3
     style p1 fill:#fff4f4,stroke:#c0392b
@@ -208,10 +209,10 @@ flowchart TB
     style p3 fill:#f2fbf1,stroke:#2e7d32
 ```
 
-1. **Own the navbar.** Delete the Bootstrap navbar markup, write it with `display: flex`, and add a `@media (min-width: 600px)` for the desktop version. That's Flexbox and a media query in one move, and it's most of the missing points.
-2. **Finish the README.** Two sections, ten minutes.
+1. **Finish the README.** Two sections, ten minutes, and it's the biggest single deduction left on the sheet.
+2. **Write one media query of your own.** The header under 600px is the natural place. If you want the bigger lesson, rebuild the navbar with your own Flexbox while you're in there.
 3. **Fix the validator errors and shrink the images.** Both are quick, and both are things a recruiter's browser will notice before they read a word.
 
-Your instincts on accessibility and process are ahead of the class. Now put the same care into the CSS you're supposed to be practicing.
+Your instincts on accessibility, layout and process are ahead of the class. Tighten the loose ends and this is a 90s project.
 
 *This PR only adds feedback files. It does not touch your code. Merge it, close it, or just read it, your call. Questions go to office hours or the Brightspace board.*
